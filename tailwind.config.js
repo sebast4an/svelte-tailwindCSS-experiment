@@ -3,18 +3,22 @@ module.exports = {
     enabled: !process.env.ROLLUP_WATCH,
     content: ['./public/index.html', './src/**/*.svelte'],
     options: {
-      defaultExtractor: content => [
-        ...(content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []),
-        ...(content.match(/(?<=class:)[^=>\/\s]*/g) || []),
-      ],
+      defaultExtractor: content => [...(content.match(/[^<>"'`\s]*[^<>"'`\s:]/g) || []), ...(content.match(/(?<=class:)[^=>\/\s]*/g) || [])],
     },
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      maxHeight: {
+        128: '32rem',
+      },
+      screens: {
+        'tablet': '440px'
+      }
+    },
   },
   variants: {
     extend: {},
   },
   plugins: [],
-}
+};

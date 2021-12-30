@@ -10,8 +10,9 @@
   ];
 </script>
 
+<section class="py-2.5 w-full">
 {#each keyboard as group, iGroup}
-  <div>
+  <div class="flex justify-evenly">
     {#each group as buttonValue, iButton}
       {#if !isNaN(buttonValue) || buttonValue === '↺' || buttonValue === '.'}
         <Button color={'text-zinc-200'}>
@@ -29,3 +30,4 @@
     {/each}
   </div>
 {/each}
+</section>

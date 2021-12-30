@@ -2,4 +2,6 @@
   import Counters from '../components/organisms/Counters/Counters.svelte';
 </script>
 
-<Counters />
+<div class="h-screen w-screen flex flex-col justify-end">
+  <Counters />
+</div>

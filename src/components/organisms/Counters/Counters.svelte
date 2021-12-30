@@ -21,8 +21,6 @@
   </h2>
 </div>
 
-<div class="rounded-t-3xl bg-zinc-900">
-  <section class="pt-5">
-    <Keyboard />
-  </section>
+<div class="flex justify-center rounded-t-3xl bg-zinc-900 w-full max-h-128 min-h-max">
+  <Keyboard />
 </div>
