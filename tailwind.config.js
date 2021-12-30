@@ -13,8 +13,21 @@ module.exports = {
         128: '32rem',
       },
       screens: {
-        'tablet': '440px'
-      }
+        tablet: '440px',
+      },
+      colors: {
+        black: {
+          900: '#22252d',
+          800: '#292d36',
+          700: '#272b33',
+        },
+        green: {
+          special: '#25f5d0',
+        },
+        red: {
+          special: '#ec6666',
+        }
+      },
     },
   },
   variants: {

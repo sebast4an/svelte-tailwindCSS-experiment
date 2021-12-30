@@ -19,11 +19,11 @@
           {buttonValue}
         </Button>
       {:else if iGroup === 0 && iButton !== 3}
-        <Button color={'text-emerald-500'}>
+        <Button color={'text-green-special'}>
           {buttonValue}
         </Button>
       {:else}
-        <Button color={'text-red-400'}>
+        <Button color={'text-red-special'}>
           {buttonValue}
         </Button>
       {/if}
