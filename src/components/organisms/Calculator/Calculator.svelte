@@ -1,4 +1,5 @@
 <script>
+  import Counters from '../../molecules/Counters/Counters.svelte';
   import Keyboard from '../../molecules/Keyboard/Keyboard.svelte';
 
   let valueOne = 308;
@@ -7,19 +8,12 @@
   let sign = 'x';
 </script>
 
-<div class="p-10 w-100 flex flex-col items-end">
-  <h3>
-    {valueOne}
-    <span class="text-red-600 font-bold">
-      {sign}
-    </span>
-    {valueTwo}
-  </h3>
-
-  <h2 class="text-4xl font-semibold my-2">
-    {summary}
-  </h2>
-</div>
+<Counters>
+  <span slot="value1">{valueOne}</span>
+  <span slot="char">{sign}</span>
+  <span slot="value2">{valueTwo}</span>
+  <span slot="summary">{summary}</span>
+</Counters>
 
 <div class="flex justify-center rounded-t-3xl bg-black-800 w-full max-h-128 min-h-max">
   <Keyboard />
