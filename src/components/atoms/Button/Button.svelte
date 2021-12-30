@@ -1,9 +1,7 @@
 <script>
-  const handleClick = () => {
-    alert('Work');
-  };
+  export let color;
 </script>
 
-<button class="rounded-xl border-0 bg-zinc-700 py-3 px-8" on:click={handleClick}>
-Handle Click
+<button class="p-4 m-1 border-0 rounded-xl w-14 h-14 bg-zinc-800 text-zinc-200 {color}">
+  <slot />
 </button>
