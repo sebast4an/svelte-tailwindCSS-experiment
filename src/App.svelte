@@ -1,13 +1,8 @@
 <script>
-  export let name;
+  import Main from './pages/Main.svelte';
 </script>
 
-<main class="lg:text-lg">
-  <h1>Hello {name}!</h1>
-  <p>
-    Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.
-  </p>
-</main>
+<Main />
 
 <style type="text/postcss" global>
   @tailwind base;
