@@ -1,5 +1,6 @@
 <script>
   import Button from '../../atoms/Button/Button.svelte';
+  // import { calculatorStore } from '../../../store/store';
 
   const keyboard = [
     ['AC', '+/-', '%', '/'],
@@ -9,12 +10,32 @@
     ['↺', '0', '.', '='],
   ];
 
+  let clickCounter = 0;
+  let valueOne;
+  let sign;
+  let valueTwo;
+
   const handleClick = e => {
-    if (isNaN(e.target.innerHTML)) {
-      console.log(`Value number: ${e.target.innerHTML}`);
+    const whichButton = e.target.innerHTML;
+
+    clickCounter += 1;
+    console.log(clickCounter);
+
+    if (isNaN(whichButton)) {
+      if (clickCounter === 2) {
+        sign = whichButton;
+      }
     } else {
-      console.log(`Value has: ${e.target.innerHTML}`);
+      switch (clickCounter) {
+        case 1:
+          valueOne = whichButton;
+          break;
+        case 3:
+          valueTwo = whichButton;
+          break;
+      }
     }
+    console.log(valueOne, sign, valueTwo);
   };
 </script>
 
